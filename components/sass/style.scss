@@ -10,11 +10,16 @@
 @import "variables";
 @import "mixins";
 @import "base";
+@import "navigation";
 @import "modules";
 
+
 // JS partials
+// Um die Funktionalität der Seite zu gewähren und zu erweitern
 @import "pixgrid";
 @import "rclick";
+@import "jquery.min";
+@import "jquery-3.6.0.min";
 
 
 
