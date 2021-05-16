@@ -2,12 +2,12 @@
   "name": "workflows",
   "version": "0.0.1",
   "description": "eine Beispiel Projekt Anwendung",
-  
-  
   "repository": {
     "type": "git",
     "url": "?.git"
   },
-  "author": "Peter Päffgen"
-  
+  "author": "Peter Päffgen",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
