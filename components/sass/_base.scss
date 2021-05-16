@@ -1,7 +1,7 @@
 // _base.scss
 // ==============
 body {
-  background: lighten($darkgrey, 10%);
+  background: $darkgrey;
   font-family: $bodyFont;
   font-size: 1.1em;
 }
