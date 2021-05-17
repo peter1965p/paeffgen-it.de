@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
+    gulpcopy = require('gulp-copy'),
     coffee = require('gulp-coffee'),
     concat = require ('gulp-concat'), 
     compass = require ('gulp-compass'),    
@@ -43,7 +44,8 @@ jsSources = [
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 jsonSources = [outputDir + 'js/*.json'];
-
+ImageSource = [outputDir + '/builds/development/images/artists/*.jpg'];
+ImageSource = [outputDir + '/builds/development/images/artwork/*.jpg'];
 
 
 
