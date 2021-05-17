@@ -26,6 +26,30 @@
   } //logo
 } //coding
 
+.p-it {
+  @include backImage('../images/misc/IT-bg.jpg');
+  img.logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    max-width: 450px;
+    min-width: 250px;
+  } //logo
+} //coding
+
+.abstract {
+  @include backImage('../images/background/bg_blue_orange.jpg');
+  img.logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    max-width: 450px;
+    min-width: 250px;
+  } //logo
+} //coding
+
 .featuredartists {
   background: $menu-background;
   border-top: 20px solid $steal;

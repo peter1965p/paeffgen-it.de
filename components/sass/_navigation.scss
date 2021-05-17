@@ -65,14 +65,14 @@
         text-transform: uppercase;
         position: relative;
         z-index: 2;
-        text-shadow:1px 0px rgba(black,.4);
+        text-shadow:2px 0px rgba(black,.4);
         color: $grey;
         letter-spacing:.2em;
         text-decoration: none;
         transition: color 200ms;
         transform-style: preserve-3d;
         &:hover {
-        color: $menu-background;
+        color: $white;
         }
         &:after {
             content: attr(data-title);
@@ -83,7 +83,7 @@
             left: 18px;
             padding: 5px 7px;
             color: transparent;
-            background: $blue;
+            background: $steal;
             li:nth-child(2) & { background:$yellow; }
              li:nth-child(3) & { background:$green; }
              li:nth-child(4) & { background:$red; }
