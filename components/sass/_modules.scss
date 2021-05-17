@@ -14,14 +14,26 @@
   } //logo
 } //city
 
+.coding {
+  @include backImage('../images/header/IT.jpg');
+  img.logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    max-width: 450px;
+    min-width: 250px;
+  } //logo
+} //coding
+
 .featuredartists {
-  background: $darkGreenGold;
-  border-top: 20px solid $beige;
-  border-bottom: 50px solid $green;
+  background: $menu-background;
+  border-top: 20px solid $steal;
+  border-bottom: 50px solid $steal;
 
   h1 {
     font-size: 3em;
-    color: darken($green, 20%);
+    color: darken($white, 20%);
     @media (max-width: 700px) {
       font-size: 2em;
     }
@@ -30,14 +42,14 @@
   h2 {
     margin-top: 20px;
     font-size: 1.8em;
-    color: darken($beige, 8%);
+    color: darken($orange, 8%);
     @media (max-width: 700px) {
      display: none;
     }
   } //h1
 
   p {
-    color: darken($green, 15%);
+    color: darken($white, 15%);
   }
 
  .artistlist {
@@ -46,12 +58,12 @@
     h2 {
       margin-top: 5px;
       font-size: 1.2em;
-      color: lighten($beige, 8%);
+      color: lighten($orange, 8%);
     } //h2
 
     .item {
       min-width: 95px;
-      color: darken($darkGreenGold, 10%);
+      color: darken($menu-background, 10%);
       width: 18%;
       float: left;
       padding: 1%;
@@ -71,7 +83,7 @@
 
 .potterypix {
   @include backImage('../images/backgrounds/pottery_workshop.jpg');
-  border-bottom: 50px solid $darkGreenGold;
+  border-bottom: 50px solid $menu-background;
 } //venue
 
 .aboutvenue {
@@ -82,12 +94,12 @@
 
 .workshoppix {
   @include backImage('../images/backgrounds/woodworking_workshop.jpg');
-  border-bottom: 50px solid $darkGreenGold;
+  border-bottom: 50px solid $menu-background;
 } //workshops
 
 .ontour {
   h1 {
-    color: lighten($purple, 5);
+    color: lighten($orange, 5);
     font-size: 3em;
     bottom: 10px;
     right: 10%;
@@ -95,14 +107,14 @@
 
   h2 {
     font-size: 1.8em;
-    color: $darkGreenGold;
-    border-top: 1px solid $darkGreenGold;
+    color: $white;
+    border-top: 1px solid $menu-background;
     padding-top: 5px;
   } //h3
 
   h3 {
     font-size: 1.3em;
-    color: lighten($purple, 15);
+    color: lighten($white, 15);
     padding-bottom: 5px;
   } //h4
 

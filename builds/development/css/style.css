@@ -1,13 +1,17 @@
 @import "http://fonts.googleapis.com/css?family=Patua+One|Inika";
 @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
 body {
-  background: #222222;
-  font-family: "Inika", arial, serif;
+  font-family: arial, helvetica, serif;
   font-size: 1.1em;
+  background-color: #1d3544;
+  background: radial-gradient(closest-corner, #2a2c2e 60%, rgba(186, 215, 233, 0.26));
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
 #content {
-  color: #CC8E94;
+  color: #343e48;
   font-size: 2em;
 }
 
@@ -19,14 +23,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Patua One", arial, sans-serif;
+  font-family: arial, helvetica, sans-serif;
   font-size: 3em;
 }
 
 h1 {
   font-size: 3.5em;
   margin-bottom: 10px;
-  color: #04ff04;
+  color: #486296;
 }
 @media (max-width: 700px) {
   h1 {
@@ -36,13 +40,13 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  color: #3E2B3D;
+  color: #ff6600;
 }
 
 p {
   font-size: 1.3em;
   line-height: 1.5em;
-  color: #3E2B3D;
+  color: #ffffff;
   margin-bottom: 20px;
   margin-top: 15px;
 }
@@ -57,7 +61,6 @@ section {
   clear: both;
 }
 
-/* Declaration der Variablen */
 @media screen {
   html {
     height: 100%;
@@ -67,8 +70,8 @@ section {
   }
 
   body {
-    background-color: #bad7e9;
-    background: radial-gradient(closest-corner, #bad7e9 60%, rgba(186, 215, 233, 0.26));
+    background-color: #99a3ff;
+    background: radial-gradient(closest-corner, #9197b3 60%, rgba(164, 180, 211, 0.26));
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -121,7 +124,7 @@ section {
     position: relative;
     z-index: 2;
     text-shadow: 1px 0px rgba(0, 0, 0, 0.4);
-    color: #686f77;
+    color: #5f6975;
     letter-spacing: .2em;
     text-decoration: none;
     transition: color 200ms;
@@ -139,7 +142,7 @@ section {
     left: 18px;
     padding: 5px 7px;
     color: transparent;
-    background: #4795c3;
+    background: #001aff;
     transform-origin: 50% 0%;
     backface-visibility: hidden;
     transform: translate3d(0px, 105%, 0px) rotateX(-112deg);
@@ -148,13 +151,13 @@ section {
     z-index: -1;
   }
   li:nth-child(2) .site-nav-list a:after {
-    background: #ecc64b;
+    background: #ffff00;
   }
   li:nth-child(3) .site-nav-list a:after {
-    background: #0b9ea6;
+    background: #04ff04;
   }
   li:nth-child(4) .site-nav-list a:after {
-    background: #f26667;
+    background: #fc0505;
   }
   .site-nav-list a:hover:after {
     transform: rotateX(0deg) translateZ(0px);
@@ -195,14 +198,49 @@ section {
   min-width: 250px;
 }
 
+.coding {
+  background: url("../images/header/IT.jpg") no-repeat 50% 20%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+@media (min-width: 801px) {
+  .coding {
+    height: 350px;
+  }
+}
+@media (max-width: 800px) {
+  .coding {
+    height: 150px;
+  }
+}
+@media (max-width: 300px) {
+  .coding {
+    height: 100px;
+  }
+}
+.coding img.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  max-width: 450px;
+  min-width: 250px;
+}
+
 .featuredartists {
-  background: #8D8862;
-  border-top: 20px solid #E3C691;
-  border-bottom: 50px solid #0b9ea6;
+  background: #343e48;
+  border-top: 20px solid #486296;
+  border-bottom: 50px solid #486296;
 }
 .featuredartists h1 {
   font-size: 3em;
-  color: #054346;
+  color: #cccccc;
 }
 @media (max-width: 700px) {
   .featuredartists h1 {
@@ -212,7 +250,7 @@ section {
 .featuredartists h2 {
   margin-top: 20px;
   font-size: 1.8em;
-  color: #dbb570;
+  color: #d65600;
 }
 @media (max-width: 700px) {
   .featuredartists h2 {
@@ -220,7 +258,7 @@ section {
   }
 }
 .featuredartists p {
-  color: #065a5e;
+  color: #d9d9d9;
 }
 .featuredartists .artistlist {
   padding-bottom: 20px;
@@ -228,11 +266,11 @@ section {
 .featuredartists .artistlist h2 {
   margin-top: 5px;
   font-size: 1.2em;
-  color: #ebd7b2;
+  color: #ff7e29;
 }
 .featuredartists .artistlist .item {
   min-width: 95px;
-  color: #6f6b4d;
+  color: #1f252a;
   width: 18%;
   float: left;
   padding: 1%;
@@ -259,7 +297,7 @@ section {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  border-bottom: 50px solid #8D8862;
+  border-bottom: 50px solid #343e48;
 }
 @media (min-width: 801px) {
   .potterypix {
@@ -291,7 +329,7 @@ section {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  border-bottom: 50px solid #8D8862;
+  border-bottom: 50px solid #343e48;
 }
 @media (min-width: 801px) {
   .workshoppix {
@@ -310,20 +348,20 @@ section {
 }
 
 .ontour h1 {
-  color: #4d354c;
+  color: #ff751a;
   font-size: 3em;
   bottom: 10px;
   right: 10%;
 }
 .ontour h2 {
   font-size: 1.8em;
-  color: #8D8862;
-  border-top: 1px solid #8D8862;
+  color: #ffffff;
+  border-top: 1px solid #343e48;
   padding-top: 5px;
 }
 .ontour h3 {
   font-size: 1.3em;
-  color: #6b4a69;
+  color: white;
   padding-bottom: 5px;
 }
 .ontour img {
