@@ -77,7 +77,7 @@ $ = require('jquery');
 
 (fill = function(item) {
   return $('.tagline').append(`${item}`);
-})('The most creative minds in Art');
+})('Ihr innovativer IT Techniker aus dem Hunsrück');
 
 fill;
 
