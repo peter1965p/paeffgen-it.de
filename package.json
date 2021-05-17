@@ -1,13 +1,14 @@
 {
   "name": "workflows",
   "version": "0.0.1",
-  "description": "eine Beispiel Projekt Anwendung",
+  "description": "Projekt der Päffgen IT Anwendung",
   "repository": {
     "type": "git",
     "url": "?.git"
   },
   "author": "Peter Päffgen",
   "devDependencies": {
+    "bootstrap": "^5.0.1",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-coffee": "^3.0.3",
