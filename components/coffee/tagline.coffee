@@ -1,4 +1,4 @@
 $ = require 'jquery'
-do fill = (item = 'Ihr innovativer IT Techniker aus dem Hunsrück') ->
+do fill = (item = 'Wir leben IT!') ->
   $('.tagline').append "#{item}"
 fill
