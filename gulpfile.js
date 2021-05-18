@@ -89,7 +89,7 @@ gulp.task('compass', function() {
       style: sassStyle
     })
     .on('error', gutil.log))
-    .pipe(postcss(processors))
+    // .pipe(postcss(processors))
     .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });
@@ -124,7 +124,7 @@ gulp.task('json', function(){
     .pipe(connect.reload())
 });
 
-gulp.task('copy', copyFunction);
+gulp.task('default', copyFunction);
 function copyFunction() {
   return gulp
     .src(['./builds/development/images/*.', './builds/production/*'])
@@ -146,4 +146,4 @@ function verify() {
   }
 }
 
-gulp.task('default',['html','json','coffee','js','compass','connect', 'copy', 'watch']);
+gulp.task('default',['html','json','coffee','js','compass','connect', 'watch']);
