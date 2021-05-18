@@ -8,7 +8,9 @@
   },
   "author": "Peter Päffgen",
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "bootstrap": "^5.0.1",
+    "browserslist": "^4.16.6",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-coffee": "^3.0.3",
@@ -22,6 +24,11 @@
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "jquery": "^3.6.0",
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "through2": "^2.0.5"
+  },
+  "dependencies": {
+    "gulp-postcss": "^9.0.0",
+    "postcss-flexbugs-fixes": "^5.0.2"
   }
 }

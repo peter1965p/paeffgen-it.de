@@ -1,3 +1,8 @@
+// gulpfile written by Peter Päffgen | Boppard
+// ===========================================
+
+const { Verify } = require('crypto');
+const { write } = require('fs');
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     gulpcopy = require('gulp-copy'),
@@ -10,9 +15,14 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     htmlmin = require('gulp-htmlmin'),
     jsonminify = require('gulp-jsonminify'),
+    postcss = require('gulp-postcss'),
+    flexbugsfixes = require('postcss-flexbugs-fixes'),
+    autoprefixer = require('autoprefixer'),
+    browsers = require('browserslist'),
+    through = require('through2'),
     browserify = require('gulp-browserify');
-   
- var env,
+
+var env,
     coffeeSources,
     jsSources,
     sassSources,
@@ -20,6 +30,13 @@ var gulp = require('gulp'),
     jsonSources,
     outputDir,
     sassStyle;
+
+  //  var processors = [
+  //    flexbugsfixes,
+  //    autoprefixer({
+  //    browsers: ['last', '> 0.1%']
+  //  })
+  //  ];
 
 env = process.env.NODE_ENV || 'production';
 
@@ -29,8 +46,6 @@ if (env==='development') {
 } else {
   outputDir = 'builds/production/';
     sassStyle = 'compressed';
-  
-  
 }
 
 
@@ -74,6 +89,7 @@ gulp.task('compass', function() {
       style: sassStyle
     })
     .on('error', gutil.log))
+    .pipe(postcss(processors))
     .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });
@@ -97,19 +113,37 @@ gulp.task('connect', function(){
 gulp.task('html', function(){
     gulp.src('builds/development/*.html')
     .pipe(gulpif(env === 'production', htmlmin({collapseWhitespace: true})))
-    .pipe(gulpif(env === 'production', gulp.dest(outputDir)))    
+    .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())
 });
 
 gulp.task('json', function(){
     gulp.src('builds/development/js/*.json')
     .pipe(gulpif(env === 'production', jsonminify()))
-    .pipe(gulpif(env === 'production', gulp.dest(outputDir))) 
+    .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())
 });
 
+gulp.task('copy', copyFunction);
+function copyFunction() {
+  return gulp
+    .src(['./builds/development/images/*.', './builds/production/*'])
+    .pipe(copy('output/images', {prefix: 1 }))
+    .pipe(verify());
+}
+function verify() {
+  var options = { objectMode: true };
+  return through(options, write, end);
 
+  function write(file, enc, cb) {
+    console.log('file', file.path);
+    cb(null, file);
+  }
 
+  function end(cb) {
+    console.log('done');
+    cb();
+  }
+}
 
-
-gulp.task('default',['html','json','coffee','js','compass','connect','watch']);
+gulp.task('default',['html','json','coffee','js','compass','connect', 'copy', 'watch']);
